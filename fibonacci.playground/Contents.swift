@@ -1,6 +1,8 @@
 import UIKit
 
-func fibonacci(_ number: Int) -> Int {
+let maxPossibleNumber = 92
+func calulateFibonacciSeries(for number: Int) -> Int? {
+    if number > 92 { return nil }
     var (firstNumber, secondNumber) = (1, 1)
     for _ in 3...number {
         let tempNumber = secondNumber
@@ -11,6 +13,8 @@ func fibonacci(_ number: Int) -> Int {
 }
 
 
-let fibonacciSeriesLastNumber = fibonacci(10)
-
-print(fibonacciSeriesLastNumber)
+if let fibonacciSeriesLastNumber = calulateFibonacciSeries(for: 100) {
+    print(fibonacciSeriesLastNumber)
+} else {
+    print("Out of range")
+}
