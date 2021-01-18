@@ -11,7 +11,7 @@ class Category: Equatable {
     }
 
     static func == (lhs: Category, rhs: Category) -> Bool {
-        return lhs.name == rhs.name
+        lhs.name == rhs.name
     }
 }
 
@@ -64,10 +64,7 @@ class Product: Hashable {
     }
 
     static func == (lhs: Product, rhs: Product) -> Bool {
-        return lhs.name == rhs.name &&
-            lhs.isImported == rhs.isImported &&
-            lhs.category == rhs.category &&
-            lhs.price == rhs.price
+        lhs.name == rhs.name && lhs.isImported == rhs.isImported && lhs.category == rhs.category && lhs.price == rhs.price
     }
 }
 
