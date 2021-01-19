@@ -6,7 +6,7 @@ enum ArithmaticOperation: Character {
     case multiply = "*"
     case divide = "/"
     
-    func evaluate(firstOperand: Double, secondOperand: Double) -> Double {
+    func evaluate(_ firstOperand: Double, _ secondOperand: Double) -> Double {
         switch self {
         case .add:
             return firstOperand + secondOperand
@@ -20,15 +20,20 @@ enum ArithmaticOperation: Character {
     }
 }
 
-struct Calculator {
-    static func calculate(firstOperand: Double, operation: Character, secondOperand: Double) -> Double? {
-        let arithmaticOperation = ArithmaticOperation.init(rawValue: operation)
-        return arithmaticOperation?.evaluate(firstOperand: firstOperand, secondOperand: secondOperand)
-    }
-}
+//struct Calculator {
+//    static func calculate(firstOperand: Double, operation: Character, secondOperand: Double) -> Double? {
+//        let arithmaticOperation = ArithmaticOperation.init(rawValue: operation)
+//        return arithmaticOperation?.evaluate(firstOperand: firstOperand, secondOperand: secondOperand)
+//    }
+//}
+//
+//if let answer = Calculator.calculate(firstOperand: 200, operation: "+", secondOperand: 20) {
+//    print(answer)
+//} else {
+//    print("Wrong operator selected")
+//}
 
-if let answer = Calculator.calculate(firstOperand: 200, operation: "+", secondOperand: 20) {
-    print(answer)
-} else {
-    print("Wrong operator selected")
-}
+ArithmaticOperation.add.evaluate(5, 7)
+ArithmaticOperation.subtract.evaluate(5, 7)
+ArithmaticOperation.multiply.evaluate(5, 7)
+ArithmaticOperation.divide.evaluate(5, 7)
