@@ -8,9 +8,9 @@ extension String {
 
 func checkPalindrome(for string: String?) -> String {
     if let stringValue = string, !stringValue.isEmpty {
-        return stringValue.isPalindrome() ? "String is a palindrome" : "String is not a palindrome"
+        return stringValue.isPalindrome() ? "Input String is a palindrome" : "Input String is not a palindrome"
     } else {
-        return "Please provide a value"
+        return "Please provide an input"
     }
 }
 
