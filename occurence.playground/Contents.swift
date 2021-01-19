@@ -14,4 +14,18 @@ func calculateCharacterOccurence(_ string: String) -> [Character: Int] {
     return occurenceCollection
 }
 
-calculateCharacterOccurence("occurence")
+extension String {
+    func removeDuplicates() -> String {
+        var uniqueStringSet = Set<Character>()
+        return self.filter { uniqueStringSet.insert($0).inserted }
+    }
+}
+
+let inputString = "occurrence"
+let output = calculateCharacterOccurence(inputString)
+
+for character in inputString.removeDuplicates() {
+    print("\(character) => \(output[character]!)")
+}
+
+
